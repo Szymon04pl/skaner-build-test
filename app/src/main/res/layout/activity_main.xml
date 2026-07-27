@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <WebView android:id="@+id/webView" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="visible"/>
+        <LinearLayout android:id="@+id/errorLayout" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:gravity="center" android:background="@color/bg_dark"
+            android:visibility="gone" android:padding="32dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Brak połączenia z serwerem" android:textSize="20sp" android:textStyle="bold"
+                android:textColor="@color/accent" android:layout_marginBottom="8dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Sprawdź internet lub spróbuj ponownie." android:textSize="14sp"
+                android:textColor="@color/text_muted" android:gravity="center" android:layout_marginBottom="24dp"/>
+            <Button android:id="@+id/btnRetry" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Spróbuj ponownie" android:backgroundTint="@color/accent" android:textColor="@color/bg_dark"/>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
